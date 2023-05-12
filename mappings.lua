@@ -10,7 +10,7 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>w"] = { "<cmd> w <CR>", "save file" },
-    ["<leader>a"] = { ":call OpenFolder()<CR>", "save file" },
+    ["<leader>a"] = { ":call OpenFolder()<CR>", "open in folder" },
   },
 }
 
