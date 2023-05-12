@@ -18,7 +18,6 @@ M.ui = {
     show_numbers = false,
     enabled = true,
     lazyload = false,
-    overriden_modules = nil,
   },
   -- nvdash (dashboard)
   nvdash = {

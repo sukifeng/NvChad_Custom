@@ -16,7 +16,16 @@ vim.cmd([[
 "autocmd InsertEnter * :silent :!e:\\Neovim\\tools\\im-select.exe 2052
  autocmd InsertLeave * :silent :!e:\\Neovim\\tools\\im-select.exe 1033
 "autocmd VimLeave * :silent :!e:\\Neovim\\tools\\im-select.exe 2052
+ let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
+ let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';'
+ let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+ let &shellpipe  = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode'
+ set shellquote= shellxquote=
 ]])
 
 --自动切换目录
 vim.o.autochdir = true
+
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
