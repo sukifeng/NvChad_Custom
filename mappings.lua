@@ -9,11 +9,10 @@ vim.cmd([[
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>w"] = { "<cmd> w <CR>", "save file" },
+    ["<leader>s"] = { "<cmd> w <CR>", "save file" },
     ["<leader>a"] = { ":call OpenFolder()<CR>", "open in folder" },
+    ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "live grep" },
   },
 }
-
--- more keybinds!
 
 return M

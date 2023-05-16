@@ -7,7 +7,7 @@
 -- })
 if vim.g.neovide then
     -- vim.o.guifont = "FiraMono Nerd Font:h10"
-    vim.o.guifont = "Hack NF:h12"
+    vim.o.guifont = "Hack NF:h11"
     vim.g.neovide_profiler = false
 end
 --自动切换输入法
@@ -31,3 +31,5 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 
 vim.o.swapfile = false
+
+vim.o.relativenumber = true
