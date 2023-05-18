@@ -7,7 +7,7 @@
 -- })
 if vim.g.neovide then
     -- vim.o.guifont = "FiraMono Nerd Font:h10"
-    vim.o.guifont = "Hack NF:h11"
+    vim.o.guifont = "Hack Nerd Font:h11"
     vim.g.neovide_profiler = false
 end
 --自动切换输入法
