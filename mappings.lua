@@ -12,6 +12,7 @@ M.general = {
         ["<leader>w"] = { "<cmd> w <CR>", "save file" },
         ["<leader>a"] = { ":call OpenFolder()<CR>", "open in folder" },
         ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "grep_string" },
+        ["<leader>fp"] = { "<cmd> Telescope projects<CR>", "grep_string" },
     }
 }
 M.disabled = {
