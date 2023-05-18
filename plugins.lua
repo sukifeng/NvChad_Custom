@@ -152,6 +152,7 @@ local plugins = {
                     ".settings/",
                     ".vscode/",
                     "__pycache__/",
+                    "doxygen/*",
                     "build/",
                     "env/",
                     "gradle/",
