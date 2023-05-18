@@ -47,25 +47,6 @@ local plugins = {
         end,
     },
     {
-        'stevearc/aerial.nvim',
-        lazy = false,
-        -- Optional dependencies
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-tree/nvim-web-devicons"
-        },
-        config = function()
-            require('aerial').setup({
-                -- optionally use on_attach to set keymaps when aerial has attached to a buffer
-                on_attach = function(bufnr)
-                    -- Jump forwards/backwards with '{' and '}'
-                    vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
-                    vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
-                end
-            })
-            end
-    },
-    {
         "folke/trouble.nvim",
         dependencies = "nvim-tree/nvim-web-devicons",
         cmd = {"TroubleToggle"},
@@ -107,6 +88,107 @@ local plugins = {
                 },
             }
         end
+    },
+    {
+        "RRethy/vim-illuminate",
+        config = function()
+            require("illuminate").configure()
+        end,
+        lazy = false
+    },
+    {
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup {
+                patterns = { ".git", "*.eww", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+            require("nvim-tree").setup({
+                sync_root_with_cwd = true,
+                respect_buf_cwd = true,
+                update_focused_file = {
+                    enable = true,
+                    update_root = true
+                },
+            })
+            require('telescope').load_extension('projects')
+        end,
+        event = "VimEnter",
+        cmd = "Telescope projects"
+    },
+    {
+        "nvim-telescope/telescope.nvim",
+        opts = {
+            defaults = {
+                file_ignore_patterns = {
+                    ".git/",
+                    ".svn/*",
+                    "setting/*",
+                    "documents/*",
+                    ".history/*",
+                    "Obj/*",
+                    "target/",
+                    "docs/",
+                    "vendor/*",
+                    "%.lock",
+                    "__pycache__/*",
+                    "%.sqlite3",
+                    "%.ipynb",
+                    "node_modules/*",
+                    -- "%.jpg",
+                    -- "%.jpeg",
+                    -- "%.png",
+                    "%.svg",
+                    "%.otf",
+                    "%.ttf",
+                    "%.webp",
+                    ".dart_tool/",
+                    ".github/",
+                    ".gradle/",
+                    ".idea/",
+                    ".settings/",
+                    ".vscode/",
+                    "__pycache__/",
+                    "build/",
+                    "env/",
+                    "gradle/",
+                    "node_modules/",
+                    "%.pdb",
+                    "%.dll",
+                    "%.class",
+                    "%.exe",
+                    "%.cache",
+                    "%.ico",
+                    "%.pdf",
+                    "%.dylib",
+                    "%.jar",
+                    "%.docx",
+                    "%.met",
+                    "smalljre_*/*",
+                    ".vale/",
+                    "%.burp",
+                    "%.mp4",
+                    "%.mkv",
+                    "%.rar",
+                    "%.zip",
+                    "%.7z",
+                    "%.tar",
+                    "%.bz2",
+                    "%.epub",
+                    "%.flac",
+                    "%.out",
+                    "%.sim",
+                    "%.dep",
+                    "%.ewp",
+                    "%.ewd",
+                    "%.ewt",
+                    "%.tar.gz",
+                },
+            }
+        }
     },
     -- To make a plugin not be loaded
     -- {

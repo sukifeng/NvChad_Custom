@@ -11,8 +11,8 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>s"] = { "<cmd> w <CR>", "save file" },
     ["<leader>a"] = { ":call OpenFolder()<CR>", "open in folder" },
-    ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "live grep" },
-  },
+    ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "grep_string" },
+    }
 }
 
 return M
