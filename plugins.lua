@@ -254,6 +254,17 @@ local plugins = {
         end,
         event = "VimEnter",
     },
+    {
+        'simrat39/symbols-outline.nvim',
+        config = function()
+            require("symbols-outline").setup{
+                keymaps = {
+                    goto_location = {"<cr>",'<2-LeftMouse>'},
+                }
+            }
+        end,
+        cmd = {'SymbolsOutline','SymbolsOutlineOpen'},
+    }
     -- To make a plugin not be loaded
     -- {
     --   "NvChad/nvim-colorizer.lua",

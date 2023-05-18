@@ -13,6 +13,7 @@ M.general = {
         ["<leader>a"] = { ":call OpenFolder()<CR>", "open in folder" },
         ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "grep_string" },
         ["<leader>fp"] = { "<cmd> Telescope projects<CR>", "grep_string" },
+        ["<leader>o"] = { "<cmd> SymbolsOutline<CR>", "SymbolsOutline" },
     }
 }
 M.disabled = {
