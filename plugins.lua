@@ -82,7 +82,11 @@ local plugins = {
             telescope.setup {
                 defaults = {
                     mappings = {
-                        i = { ["<c-t>"] = trouble.open_with_trouble },
+                        i = {
+                            ["<c-t>"] = trouble.open_with_trouble,
+                            ["<C-j>"] = require('telescope.actions').move_selection_next,
+                            ["<C-k>"] = require('telescope.actions').move_selection_previous,
+                        },
                         n = { ["<c-t>"] = trouble.open_with_trouble },
                     },
                 },
@@ -101,6 +105,8 @@ local plugins = {
         config = function()
             require("project_nvim").setup {
                 patterns = { ".git", "*.eww", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+                silent_chdir = true,
+                detection_methods = {  "pattern","lsp" }, 
 
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
