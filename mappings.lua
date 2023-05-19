@@ -21,6 +21,7 @@ M.disabled = {
         ["<leader>wk"] = "",
         ["<leader>wl"] = "",
         ["<leader>wr"] = "",
+        ["<leader>f"] = ""
     }
 }
 M.telescope = {
@@ -28,9 +29,5 @@ M.telescope = {
         ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "grep_string" },
         ["<leader>fp"] = { "<cmd> Telescope projects<CR>", "projects" },
     },
-    -- i = {
-    --     ["<C-j>"] = require('telescope.actions').move_selection_next,
-    --     ["<C-k>"] = require('telescope.actions').move_selection_previous,
-    -- },
 }
 return M
