@@ -22,7 +22,7 @@ vim.cmd([[
  "let &shellpipe  = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode'
  "set shellquote= shellxquote=
 ]])
-
+vim.g.snipmate_snippets_path = vim.fn.stdpath "config" .. '\\lua\\custom\\snippets'
 --自动切换目录
 -- vim.o.autochdir = true
 
@@ -35,4 +35,3 @@ vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
 
 vim.o.relativenumber = true
-
