@@ -26,8 +26,10 @@ M.disabled = {
 }
 M.telescope = {
     n = {
-        ["<leader>fs"] = { "<cmd> Telescope grep_string<CR>", "grep_string" },
+        ["<leader>fg"] = { "<cmd> Telescope grep_string<CR>", "grep_string" },
         ["<leader>fp"] = { "<cmd> Telescope projects<CR>", "projects" },
+        ["<leader>fc"] = { "<cmd> Telescope lsp_outgoing_calls<CR>", "who call the function" },
+        ["<leader>fs"] = { "<cmd> Telescope treesitter<CR>", "symbols" },
     },
 }
 return M
