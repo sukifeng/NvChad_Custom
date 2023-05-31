@@ -14,7 +14,7 @@ M.treesitter = {
     "markdown_inline",
   },
   indent = {
-    enable = true,
+    enable = false,
     -- disable = {
     --   "python"
     -- },
