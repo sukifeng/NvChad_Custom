@@ -13,5 +13,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig['clangd'].setup {
+    capabilities = {offsetEncoding = "utf-8"}
+}
+
 -- 
 -- lspconfig.pyright.setup { blabla}
