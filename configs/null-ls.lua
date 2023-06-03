@@ -27,7 +27,8 @@ null_ls.setup {
           vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
           vim.api.nvim_create_autocmd("BufWritePre", {
               group = augroup,
-              buffer = bufnr,
+              --buffer = bufnr,
+              pattern = {"*.c", "*.h"},
               callback = function()
                   -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
                   -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
