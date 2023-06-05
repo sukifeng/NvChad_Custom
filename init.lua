@@ -11,7 +11,7 @@ if vim.g.neovide then
     vim.g.neovide_profiler = false
 end
 --自动切换输入法
-vim.cmd([[
+vim.cmd [[
  autocmd VimEnter * :silent :!e:\\Neovim\\tools\\im-select.exe 1033
 "autocmd InsertEnter * :silent :!e:\\Neovim\\tools\\im-select.exe 2052
  autocmd InsertLeave * :silent :!e:\\Neovim\\tools\\im-select.exe 1033
@@ -21,8 +21,8 @@ vim.cmd([[
  "let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
  "let &shellpipe  = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode'
  "set shellquote= shellxquote=
-]])
-vim.g.snipmate_snippets_path = vim.fn.stdpath "config" .. '/lua/custom/snippets'
+]]
+vim.g.snipmate_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets"
 --自动切换目录
 -- vim.o.autochdir = true
 
