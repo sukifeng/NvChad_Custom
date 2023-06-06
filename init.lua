@@ -10,7 +10,7 @@ if vim.g.neovide then
     vim.o.guifont = "Hack Nerd Font:h11"
     vim.g.neovide_profiler = false
     vim.cmd [[
-    -- autoread
+    "autoread
     autocmd FocusGained * checktime
     ]]
 end
