@@ -37,6 +37,20 @@ local plugins = {
         "nvim-tree/nvim-tree.lua",
         opts = overrides.nvimtree,
     },
+    {
+        "NvChad/nvterm",
+        opts = {
+            terminals = {
+                type_opts = {
+                    float = {
+                        row = 0.1,
+                        col = 0.25,
+                        height = 0.8,
+                    },
+                },
+            },
+        },
+    },
 
     {
         "hrsh7th/nvim-cmp",
