@@ -12,6 +12,12 @@ M.general = {
         ["<leader>w"] = { "<cmd> w <CR>", "save file" },
         ["<leader>a"] = { ":call OpenFolder()<CR>", "open in folder" },
         ["<leader>o"] = { "<cmd> SymbolsOutline<CR>", "SymbolsOutline" },
+        ["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
+        ["<leader>bf"] = { function()
+            vim.lsp.buf.format{async = false}
+            vim.cmd('w')
+        end ,
+        "buffer format" },
     }
 }
 M.disabled = {
@@ -21,7 +27,8 @@ M.disabled = {
         ["<leader>wk"] = "",
         ["<leader>wl"] = "",
         ["<leader>wr"] = "",
-        ["<leader>f"] = ""
+        ["<leader>f"] = "",
+        ["<leader>b"] = "",
     }
 }
 M.telescope = {
